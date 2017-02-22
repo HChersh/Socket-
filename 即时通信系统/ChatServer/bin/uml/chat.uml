@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="chat">
+  <packagedElement xmi:type="uml:Package" xmi:id="_v41N0fCKEeWX1o6ZFiovNw" name="core">
+    <elementImport xmi:id="_9ABmMPCNEeWX1o6ZFiovNw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <elementImport xmi:id="_HLGTEPCOEeWX1o6ZFiovNw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <elementImport xmi:id="_6nNfQPCOEeWX1o6ZFiovNw">
+      <importedElement xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+    </elementImport>
+    <packagedElement xmi:type="uml:Class" xmi:id="_w0kdUPCKEeWX1o6ZFiovNw" name="Thread"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BqbAIfCLEeWX1o6ZFiovNw" name="UserThread">
+      <generalization xmi:id="_BrQGkfCLEeWX1o6ZFiovNw">
+        <general xmi:type="uml:Class" href="../../chat.uml#_BrQGkPCLEeWX1o6ZFiovNw"/>
+      </generalization>
+      <generalization xmi:id="_OydX8PCMEeWX1o6ZFiovNw" general="_Jw6JoPCMEeWX1o6ZFiovNw"/>
+      <ownedAttribute xmi:id="_BrSi0PCLEeWX1o6ZFiovNw" name="s" visibility="package">
+        <type xmi:type="uml:DataType" href="../../chat.uml#_Bqt7F_CLEeWX1o6ZFiovNw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_BrVmIPCLEeWX1o6ZFiovNw" name="userlist" visibility="package"/>
+      <ownedOperation xmi:id="_BrXbUPCLEeWX1o6ZFiovNw" name="run" visibility="public"/>
+      <ownedOperation xmi:id="_BrZQgvCLEeWX1o6ZFiovNw" name="islogin" visibility="public">
+        <ownedParameter xmi:id="_BrZQg_CLEeWX1o6ZFiovNw" name="userlist">
+          <type xmi:type="uml:DataType" href="../../chat.uml#_Bqt7GfCLEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_BrZQhPCLEeWX1o6ZFiovNw" name="username">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_BrZQhfCLEeWX1o6ZFiovNw" name="password">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_BrZQhvCLEeWX1o6ZFiovNw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_BrbFsPCLEeWX1o6ZFiovNw" name="addSocket" visibility="public">
+        <ownedParameter xmi:id="_BrbFsfCLEeWX1o6ZFiovNw" name="username">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_BrbFsvCLEeWX1o6ZFiovNw" name="userlist">
+          <type xmi:type="uml:DataType" href="../../chat.uml#_Bqt7GfCLEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_BrbFs_CLEeWX1o6ZFiovNw" name="s">
+          <type xmi:type="uml:DataType" href="../../chat.uml#_Bqt7F_CLEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Brdh8PCLEeWX1o6ZFiovNw" name="findUser" visibility="public">
+        <ownedParameter xmi:id="_Brdh8fCLEeWX1o6ZFiovNw" name="username">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Brdh8vCLEeWX1o6ZFiovNw" name="userlist">
+          <type xmi:type="uml:DataType" href="../../chat.uml#_Bqt7GfCLEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+        <ownedParameter xmi:id="_Brdh8_CLEeWX1o6ZFiovNw" name="return" type="_BqdcYPCLEeWX1o6ZFiovNw" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Bqc1UPCLEeWX1o6ZFiovNw" name="StartServer">
+      <ownedOperation xmi:id="_BrfXIPCLEeWX1o6ZFiovNw" name="main" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_BrfXIfCLEeWX1o6ZFiovNw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_BrfXIvCLEeWX1o6ZFiovNw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_BrfXI_CLEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BqdcYPCLEeWX1o6ZFiovNw" name="User">
+      <ownedAttribute xmi:id="_Brf-MPCLEeWX1o6ZFiovNw" name="username" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_BrglQPCLEeWX1o6ZFiovNw" name="password" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_BrhMUPCLEeWX1o6ZFiovNw" name="socket" visibility="package">
+        <type xmi:type="uml:DataType" href="../../chat.uml#_Bqt7F_CLEeWX1o6ZFiovNw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_BrhzYPCLEeWX1o6ZFiovNw" name="userlist" visibility="package"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_RfSAAPCLEeWX1o6ZFiovNw" name="ChatClient">
+      <ownedAttribute xmi:id="_Rf2nwPCLEeWX1o6ZFiovNw" name="frame" visibility="private"/>
+      <ownedAttribute xmi:id="_Rf9VcPCLEeWX1o6ZFiovNw" name="nameTextField" visibility="private"/>
+      <ownedAttribute xmi:id="_RgEDIPCLEeWX1o6ZFiovNw" name="PasswordTextField" visibility="private"/>
+      <ownedAttribute xmi:id="_RgKw0PCLEeWX1o6ZFiovNw" name="dos" visibility="package">
+        <type xmi:type="uml:DataType" href="../../../ChatClient/chat.uml#_RfqagPCLEeWX1o6ZFiovNw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RgSFkPCLEeWX1o6ZFiovNw" name="dis" visibility="package">
+        <type xmi:type="uml:DataType" href="../../../ChatClient/chat.uml#_RfpzePCLEeWX1o6ZFiovNw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Rg3UYPCLEeWX1o6ZFiovNw" name="username" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_Rg9bAPCLEeWX1o6ZFiovNw" name="password" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RhC6kPCLEeWX1o6ZFiovNw" name="reciever" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RhIaIPCLEeWX1o6ZFiovNw" name="s" visibility="package">
+        <type xmi:type="uml:DataType" href="../../../ChatClient/chat.uml#_RfqahfCLEeWX1o6ZFiovNw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_RhOgwPCLEeWX1o6ZFiovNw" name="contentArea" visibility="package"/>
+      <ownedAttribute xmi:id="_RhVOcPCLEeWX1o6ZFiovNw" name="facePanel" visibility="package"/>
+      <nestedClassifier xmi:type="uml:Class" xmi:id="_RfVDUPCLEeWX1o6ZFiovNw" name="ClientThread">
+        <ownedAttribute xmi:id="_RhmUMPCLEeWX1o6ZFiovNw" name="s" visibility="package">
+          <type xmi:type="uml:DataType" href="../../../ChatClient/chat.uml#_RfqahfCLEeWX1o6ZFiovNw"/>
+        </ownedAttribute>
+        <ownedOperation xmi:id="_RhowcPCLEeWX1o6ZFiovNw" name="run" visibility="public"/>
+      </nestedClassifier>
+      <ownedOperation xmi:id="_RhYRwPCLEeWX1o6ZFiovNw" name="main" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_RhYRwfCLEeWX1o6ZFiovNw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RhYRwvCLEeWX1o6ZFiovNw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RhYRw_CLEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_RhbVEPCLEeWX1o6ZFiovNw" name="initialize" visibility="private"/>
+      <ownedOperation xmi:id="_RhdxUPCLEeWX1o6ZFiovNw" name="getTime" visibility="public">
+        <ownedParameter xmi:id="_RhdxUfCLEeWX1o6ZFiovNw" name="return" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_Rhg0oPCLEeWX1o6ZFiovNw" name="addFace" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_zDDRoPCLEeWX1o6ZFiovNw" name="A_&lt;chatClient>_&lt;startServer>" memberEnd="_zDDRofCLEeWX1o6ZFiovNw _zDDRpPCLEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_zDDRofCLEeWX1o6ZFiovNw" name="chatClient" type="_RfSAAPCLEeWX1o6ZFiovNw" association="_zDDRoPCLEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zDDRovCLEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zDDRo_CLEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_zDDRpPCLEeWX1o6ZFiovNw" name="startServer" type="_Bqc1UPCLEeWX1o6ZFiovNw" association="_zDDRoPCLEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_zDDRpfCLEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_zDDRpvCLEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_Jw6JoPCMEeWX1o6ZFiovNw" name="Thread"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_RxUVwPCMEeWX1o6ZFiovNw" name="A_&lt;user>_&lt;startServer>" memberEnd="_RxUVwfCMEeWX1o6ZFiovNw _RxUVxPCMEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_RxUVwfCMEeWX1o6ZFiovNw" name="user" type="_BqdcYPCLEeWX1o6ZFiovNw" association="_RxUVwPCMEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RxUVwvCMEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RxUVw_CMEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_RxUVxPCMEeWX1o6ZFiovNw" name="startServer" type="_Bqc1UPCLEeWX1o6ZFiovNw" association="_RxUVwPCMEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RxUVxfCMEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_RxUVxvCMEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_YsW1QPCMEeWX1o6ZFiovNw" name="A_&lt;startServer>_&lt;userThread>" memberEnd="_YsW1QfCMEeWX1o6ZFiovNw _YsW1RPCMEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_YsW1QfCMEeWX1o6ZFiovNw" name="startServer" type="_Bqc1UPCLEeWX1o6ZFiovNw" association="_YsW1QPCMEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YsW1QvCMEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YsW1Q_CMEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_YsW1RPCMEeWX1o6ZFiovNw" name="userThread" type="_BqbAIfCLEeWX1o6ZFiovNw" association="_YsW1QPCMEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YsW1RfCMEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YsW1RvCMEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_bl-twPCMEeWX1o6ZFiovNw" name="A_&lt;user>_&lt;userThread>" memberEnd="_bl-twfCMEeWX1o6ZFiovNw _bl-txPCMEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_bl-twfCMEeWX1o6ZFiovNw" name="user" type="_BqdcYPCLEeWX1o6ZFiovNw" association="_bl-twPCMEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bl-twvCMEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bl-tw_CMEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_bl-txPCMEeWX1o6ZFiovNw" name="userThread" type="_BqbAIfCLEeWX1o6ZFiovNw" association="_bl-twPCMEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_bl-txfCMEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_bl-txvCMEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_coAygPCMEeWX1o6ZFiovNw" name="ClientThread">
+      <generalization xmi:id="_AtPUQPCNEeWX1o6ZFiovNw" general="_0b9v4PCMEeWX1o6ZFiovNw"/>
+      <ownedAttribute xmi:id="_9nrcEPCNEeWX1o6ZFiovNw" name="Socket">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0b9v4PCMEeWX1o6ZFiovNw" name="Thread"/>
+    <packagedElement xmi:type="uml:Association" xmi:id="_FBcUYPCNEeWX1o6ZFiovNw" name="A_&lt;chatClient>_&lt;clientThread>" memberEnd="_FBcUYfCNEeWX1o6ZFiovNw _FBcUZPCNEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_FBcUYfCNEeWX1o6ZFiovNw" name="chatClient" type="_RfSAAPCLEeWX1o6ZFiovNw" association="_FBcUYPCNEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FBcUYvCNEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FBcUY_CNEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_FBcUZPCNEeWX1o6ZFiovNw" name="clientThread" type="_coAygPCMEeWX1o6ZFiovNw" association="_FBcUYPCNEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FBcUZfCNEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FBcUZvCNEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_v5HhsPCKEeWX1o6ZFiovNw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_v5HhsfCKEeWX1o6ZFiovNw" name="io"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_v5Hhs_CKEeWX1o6ZFiovNw" name="net"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_v5IIwvCKEeWX1o6ZFiovNw" name="util"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_RfpMYfCLEeWX1o6ZFiovNw" name="awt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_RfpzcvCLEeWX1o6ZFiovNw" name="event"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_Rfqah_CLEeWX1o6ZFiovNw" name="text"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_RfrBkPCLEeWX1o6ZFiovNw" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_RfrBkfCLEeWX1o6ZFiovNw" name="swing"/>
+  </packagedElement>
+</uml:Model>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_qb8akM37EdqwVrslYOdUDA" name="uml">
+  <packagedElement xmi:type="uml:Package" xmi:id="_R7QYEPCQEeWX1o6ZFiovNw" name="java">
+    <packagedElement xmi:type="uml:Package" xmi:id="_R7QYEfCQEeWX1o6ZFiovNw" name="io"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_R7Q_IPCQEeWX1o6ZFiovNw" name="net"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_aeC4gfCQEeWX1o6ZFiovNw" name="awt">
+      <packagedElement xmi:type="uml:Package" xmi:id="_aeDfmfCQEeWX1o6ZFiovNw" name="event"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_aeFUwPCQEeWX1o6ZFiovNw" name="util"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TlByQfCQEeWX1o6ZFiovNw" name="http">
+    <packagedElement xmi:type="uml:Class" xmi:id="_TlCZUPCQEeWX1o6ZFiovNw" name="TaskThread">
+      <generalization xmi:id="_TlnBEfCQEeWX1o6ZFiovNw" general="_TlnBEPCQEeWX1o6ZFiovNw"/>
+      <generalization xmi:id="_3EBacPCQEeWX1o6ZFiovNw" general="_0vxf4PCQEeWX1o6ZFiovNw"/>
+      <ownedAttribute xmi:id="_TloPMPCQEeWX1o6ZFiovNw" name="s" visibility="private">
+        <type xmi:type="uml:DataType" href="../../uml.uml#_TlS4BvCQEeWX1o6ZFiovNw"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TlpdUPCQEeWX1o6ZFiovNw" name="root" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:id="_TlqEYPCQEeWX1o6ZFiovNw" name="requestPath" visibility="package">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_TlqrcPCQEeWX1o6ZFiovNw" name="run" visibility="public"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TlDncPCQEeWX1o6ZFiovNw" name="HTTPServer">
+      <ownedOperation xmi:id="_Tlr5kPCQEeWX1o6ZFiovNw" name="main" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_Tlr5kfCQEeWX1o6ZFiovNw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Tlr5kvCQEeWX1o6ZFiovNw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Tlr5k_CQEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_TlnBEPCQEeWX1o6ZFiovNw" name="Thread"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_adyZ0vCQEeWX1o6ZFiovNw" name="SwingClient">
+      <ownedAttribute xmi:id="_aeGi4PCQEeWX1o6ZFiovNw" name="frame" visibility="private"/>
+      <ownedAttribute xmi:id="_aeI_IPCQEeWX1o6ZFiovNw" name="iptextField" visibility="private"/>
+      <ownedAttribute xmi:id="_aeK0UPCQEeWX1o6ZFiovNw" name="porttextField" visibility="private"/>
+      <ownedAttribute xmi:id="_aeMpgPCQEeWX1o6ZFiovNw" name="filenametextField" visibility="private"/>
+      <ownedAttribute xmi:id="_aeOesPCQEeWX1o6ZFiovNw" name="filepathtextField" visibility="private"/>
+      <ownedAttribute xmi:id="_aeQ68PCQEeWX1o6ZFiovNw" name="s" visibility="package">
+        <type xmi:type="uml:DataType" href="../../../HTTPClient/uml.uml#_aeEGovCQEeWX1o6ZFiovNw"/>
+      </ownedAttribute>
+      <ownedOperation xmi:id="_aelEAPCQEeWX1o6ZFiovNw" name="main" visibility="public" isStatic="true">
+        <ownedComment xmi:id="_aengQPCQEeWX1o6ZFiovNw">
+          <body>/** 
+ * Launch the application.
+ */
+</body>
+        </ownedComment>
+        <ownedParameter xmi:id="_aelEAfCQEeWX1o6ZFiovNw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aelEAvCQEeWX1o6ZFiovNw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aelEA_CQEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:id="_aengQfCQEeWX1o6ZFiovNw" name="initialize" visibility="private">
+        <ownedComment xmi:id="_aeouYPCQEeWX1o6ZFiovNw">
+          <body>/** 
+ * Initialize the contents of the frame.
+ */
+</body>
+        </ownedComment>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_adzn8PCQEeWX1o6ZFiovNw" name="HTTPClient">
+      <ownedOperation xmi:id="_aeouYfCQEeWX1o6ZFiovNw" name="main" visibility="public" isStatic="true">
+        <ownedParameter xmi:id="_aeouYvCQEeWX1o6ZFiovNw" name="args">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aeouY_CQEeWX1o6ZFiovNw" value="*"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_aeouZPCQEeWX1o6ZFiovNw"/>
+        </ownedParameter>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_jkuJIPCQEeWX1o6ZFiovNw" name="A_&lt;taskThread>_&lt;hTTPServer>" memberEnd="_jkuJIfCQEeWX1o6ZFiovNw _jkuJJPCQEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_jkuJIfCQEeWX1o6ZFiovNw" name="taskThread" type="_TlCZUPCQEeWX1o6ZFiovNw" association="_jkuJIPCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jkuJIvCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jkuJI_CQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_jkuJJPCQEeWX1o6ZFiovNw" name="hTTPServer" type="_TlDncPCQEeWX1o6ZFiovNw" association="_jkuJIPCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jkuJJfCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jkuJJvCQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_kFRRcPCQEeWX1o6ZFiovNw" name="A_&lt;hTTPClient>_&lt;hTTPServer>" memberEnd="_kFRRcfCQEeWX1o6ZFiovNw _kFRRdPCQEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_kFRRcfCQEeWX1o6ZFiovNw" name="hTTPClient" type="_adzn8PCQEeWX1o6ZFiovNw" association="_kFRRcPCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kFRRcvCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kFRRc_CQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_kFRRdPCQEeWX1o6ZFiovNw" name="hTTPServer" type="_TlDncPCQEeWX1o6ZFiovNw" association="_kFRRcPCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kFRRdfCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kFRRdvCQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_ke9j0PCQEeWX1o6ZFiovNw" name="A_&lt;swingClient>_&lt;hTTPServer>" memberEnd="_ke9j0fCQEeWX1o6ZFiovNw _ke9j1PCQEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_ke9j0fCQEeWX1o6ZFiovNw" name="swingClient" type="_adyZ0vCQEeWX1o6ZFiovNw" association="_ke9j0PCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ke9j0vCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ke9j0_CQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_ke9j1PCQEeWX1o6ZFiovNw" name="hTTPServer" type="_TlDncPCQEeWX1o6ZFiovNw" association="_ke9j0PCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ke9j1fCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ke9j1vCQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Association" xmi:id="_s2GN4PCQEeWX1o6ZFiovNw" name="A_&lt;hTTPClient>_&lt;taskThread>" memberEnd="_s2GN4fCQEeWX1o6ZFiovNw _s2GN5PCQEeWX1o6ZFiovNw">
+      <ownedEnd xmi:id="_s2GN4fCQEeWX1o6ZFiovNw" name="hTTPClient" type="_adzn8PCQEeWX1o6ZFiovNw" association="_s2GN4PCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s2GN4vCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s2GN4_CQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+      <ownedEnd xmi:id="_s2GN5PCQEeWX1o6ZFiovNw" name="taskThread" type="_TlCZUPCQEeWX1o6ZFiovNw" association="_s2GN4PCQEeWX1o6ZFiovNw">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_s2GN5fCQEeWX1o6ZFiovNw" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_s2GN5vCQEeWX1o6ZFiovNw" value="1"/>
+      </ownedEnd>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_0vxf4PCQEeWX1o6ZFiovNw" name="Thread"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_aeDfkfCQEeWX1o6ZFiovNw" name="javax">
+    <packagedElement xmi:type="uml:Package" xmi:id="_aeDfkvCQEeWX1o6ZFiovNw" name="swing"/>
+  </packagedElement>
+</uml:Model>
